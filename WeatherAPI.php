@@ -8,11 +8,12 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_URL, $googleAPiUrl);
 $response = curl_exec($ch);
 curl_close($ch);
+echo $response;
 $data = json_decode($response);
 $currentTime = time();
-// echo "<pre>";
+echo "<pre>";
 print_r($data);
-// echo "<pre>";
+echo "</pre>";
 
 ?>
 
