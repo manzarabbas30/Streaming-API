@@ -4,7 +4,7 @@ $apiKey = "1c2431a8d340e882105f12dd67eaf341";
 $cityId = "1169825";
 $googleAPiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_HEADER, 0);
+// curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_URL, $googleAPiUrl);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -34,8 +34,8 @@ print_r($data);
     <div class="report-container">
         <h2><?php echo $data->name;?> Weather Status</h2>
         <div class="time">
-            <div><?php echo date("l g:i a", $currentTime); ?></div>
-            <div><?php echo date("iS F, Y", $currentTime); ?></div>
+            <div>Time : <?php echo date("l g:i a", $currentTime); ?></div>
+            <div>Date : <?php echo date("d F, Y", $currentTime); ?></div>
 
             <div><?php echo ucwords($data->weather[0]->description) ?></div>
         </div>
