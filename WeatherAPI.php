@@ -4,7 +4,7 @@ $apiKey = "1c2431a8d340e882105f12dd67eaf341";
 $cityId = "1169825";
 $googleAPiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
 $ch = curl_init();
-// curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_URL, $googleAPiUrl);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
