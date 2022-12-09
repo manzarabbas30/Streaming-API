@@ -14,7 +14,10 @@ $response = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($response);
 $currentTime = time();
+// echo "<pre>";
 print_r($data);
+// echo "<pre>";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
