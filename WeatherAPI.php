@@ -12,7 +12,7 @@ echo $response;
 $data = json_decode($response);
 $currentTime = time();
 echo "<pre>";
-print_r($data);
+// print_r($data);
 echo "</pre>";
 
 ?>
@@ -58,7 +58,6 @@ echo "</pre>";
             <div>Humidty: <?php echo $data->main->humidity; ?> %</div>
             <div>Wind : <?php echo $data->wind->speed; ?> km/h</div>
         </div>
-
     </div>
 </body>
 

@@ -5,7 +5,6 @@ curl_setopt($ch, CURLOPT_URL, 'https://rest.coinapi.io/v1/exchanges');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
-
 $headers = array();
 $headers[] = 'X-Coinapi-Key: CD585B5B-B391-4268-AE8F-31C8F822D479';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
